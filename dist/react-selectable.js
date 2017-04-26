@@ -215,7 +215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			key: '_mouseDown',
 			value: function _mouseDown(e) {
 				// Disable if target is control by react-dnd
-				if (!!e.target.draggable) return;
+				if (!!e.target.draggable || !!e.target.parentElement.draggable) return;
 
 				var node = _reactDom2.default.findDOMNode(this);
 				var collides = void 0,
